@@ -1,0 +1,409 @@
+/*====================GOOGLE FONTS============================*/
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200;400;600&family=Lobster&display=swap');
+
+/*==============XX======GOOGLE FONTS============XX================*/
+
+/*====================VARIABLE CSS============================*/
+ :root{
+--header-height: 3rem;
+
+/*====================COLORS============================*/
+--deep-brown: hsla(27, 31%, 55%, 0.99);
+--orange-color: hsla(29, 70%, 59%, 1);
+--black-text:hsla(0, 0%, 0%, 1);
+--brown-light:hsla(25, 18%, 67%, 0.83);
+--brown-gradient:linear-gradient(120deg, #c79081 0%, #dfa579 100%);
+--text-light:#FFEACE;
+
+/*================XX=======COLORS================XX=========*/
+
+/*====================FONTS============================*/
+--body-font: 'Bitter', serif;
+--slant-font: 'Lobster', cursive;
+--biggest-font-size: 3.5rem;
+--h1-font-size: 2.3vw;
+--h2-font-size: 1.8vw;
+--h3-font-size: 1rem;
+
+--font-weight-mid:400;
+--font-weight-text: 200;
+--font-weight-big:700;
+
+/*==============X======FONTS===========X=================*/
+
+
+}
+
+
+/*=====================GENERAL VARIABLES=========================*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: var(--header-height), 0, 0, 0,0;
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-mid);
+    color: var(--black-text);
+}
+
+
+
+
+
+/*============XX=========GENERAL VARIABLES=========XX================*/
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-text);
+    
+}
+
+button{
+    border-radius: 3rem;
+    padding: 1rem 2.5rem;
+    background-color:var(--orange-color);
+    font-family: var(--slant-font);
+    font-size: 1.5rem;
+    transition: 1s;
+    color: var(--text-light);
+   
+}
+
+
+
+
+/*====================REUSABLE CLASS============================*/
+
+
+
+/*==============XX======REUSABLE CLASS============XX================*/
+
+
+
+/*==============XX======VARIABLE CSS============XX================*/
+.header{
+    
+    width:100%;
+    background-color:var(--deep-brown);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+}
+
+.big-bg{
+    background-color: var(--deep-brown);
+    height: 100vh;
+   
+}
+
+.nav{
+    display: flex;
+    height:3rem;
+    justify-content: space-between;
+    align-items: center;
+    margin:1rem 6vw 0 6vw;
+
+}
+
+.icon{
+    margin-right: .8rem;
+}
+
+.nav-menu{
+    display:flex;
+   
+}
+
+.nav-icon-container{
+    display: flex;
+}
+
+.nav-item{
+    display: block;
+    padding: 1rem;
+    margin: 0 0.5vw;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-mid);
+    transition: all ease-in-out 1s;
+}
+
+.nav-item:hover{
+    background-color: var(--brown-light);
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    font-weight: var(--font-weight);
+}
+
+.brand-name{
+    font-size: 2rem;
+    font-family: var(--slant-font);
+}
+
+.nav-toggle{
+    position: fixed;
+    top: 5%;
+    left: 0%;
+    font-size: 1.5rem;
+}
+
+.nav-close{
+    position: relative;
+    top: 5%;
+    left: 100%;
+    font-size: 1.5rem;
+    
+    
+}
+
+.home{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.home .home-section{
+    display:flex;
+    flex-direction: row;
+  
+    padding: 6rem 0 0 0;
+    width: 100%;
+    position: absolute;
+    top: 3rem;
+}
+
+.food-img{
+    border: 1.5vw solid var(--brown-light);
+    width: 10rem;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.home-section .food-image-container{
+  background-color: var(--brown-light);
+  border-radius: 50%;
+  margin-left: 6vw;
+  width: 30vw;
+   
+    
+}
+
+.home-section .home-content{
+    font-family:var(--h1-font-size);
+    font-weight: var(--font-weight-mid);
+    margin: 5rem  2rem 0 4vw;
+
+}
+.home-title{
+    font-size:var(--h1-font-size);
+    
+}
+
+.afro-dish{
+    font-size: var(--biggest-font-size) ;
+    font-weight: var(--font-weight-big);
+}
+
+.subtitle{
+    font-family: var(--slant-font);
+    font-size: var(--h2-font-size);
+}
+
+.place-order{
+    
+    margin-top: 2rem;
+    position: relative;
+    left:30%;
+}
+
+.design{
+   position: fixed;
+   width: 100vw;
+   top: 80%;
+  
+
+}
+
+.social-link{
+    font-size: 2rem;
+    color:sienna;
+    margin-left: 1rem;
+}
+
+
+.social{
+    display: flex;
+    position: absolute;
+    top: 95%;
+    right: 3rem;    
+}
+
+.home-end-text{
+    font-family: var(--slant-font);
+    font-size: 1.5rem;
+    color: var(--black-text);
+    padding-right: 5vw;
+}
+
+
+@media screen and (max-width:750px){
+
+.home-section{
+    padding: 7vw !important;
+    top: 0.1rem !important;
+    flex-direction: column-reverse !important;
+}
+.home-title{
+    font-size: 1.5rem !important;
+}
+.nav-toggle{
+    left: 85%;
+}
+.afro-dish{
+    font-size: 15vw;
+}
+
+
+.food-img{
+   
+    width: 50vw;
+    margin-top: 2rem;
+    border:none;
+    border-radius: 50%;
+    border: 10px solid var(--brown-light);
+}
+
+
+
+.food-image-container{
+    background-color:transparent!important;
+    position: absolute;
+    top: 40vh;
+    padding:0 7vw;
+   
+    
+}
+
+.place-order{
+  
+   
+    top: 40vh !important;
+    right: 30vw!important;
+
+}
+.btn{
+    padding: .5rem 2rem ;
+    font-size: 1.0rem !important;
+    font-weight: var(--font-weight-text) !important;
+}
+
+.nav-menu{
+   flex-direction: column;
+    margin-top:1rem;
+}
+
+.subtitle{
+   position: absolute;
+   top: 100%;
+   left: 10%;
+   font-size: 5vw;
+   margin: 29vw 0 0 0 !important ;
+
+}
+
+
+.nav-container{
+   visibility: hidden;
+    transition: 1s ease-out;
+    padding: 3rem;
+    position: absolute;
+    top: 0 ;
+    right: 0 ;
+    width: 70vw;
+    height: 100vh ;
+    background-image:var(--brown-gradient);  
+}
+.nav-item{
+    font-size: 1.5rem;
+}
+
+.social{
+    display: none;
+}
+
+.design{
+    position: absolute;
+    top: 93%;
+}
+
+
+.card-container{
+    display: flex;
+    width: 100vw;
+    
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 6vw;
+  height: 300px;
+  margin: 1rem;
+  width: 55vw;
+  background-color:var(--text-light);
+  text-align: center;
+  padding: 0 ;
+  
+}
+
+.card-img{
+    width: 55vw;
+    padding: 1rem;
+}
+.card-content{
+    background-image: var(--brown-gradient);
+    height: inherit;
+}
+.food-title{
+    font-family:var(--slant-font);
+    padding: 1rem;
+
+}
+.price{
+    font-size: 1.5rem;
+    padding: 0.3rem;
+}
+.rating{
+    padding: .5rem 0.1rem;
+}
+
+
+}
+
+@media screen and ( max-width: 375px){
+    .subtitle{
+        margin: 20vw 0 0 0 !important;
+        font-size: 1rem;
+    }
+
+    .place-order{
+        top: 12rem !important;
+    }
+    
+    .food-img{
+        width:160px !important;
+    }
+}
