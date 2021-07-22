@@ -14,6 +14,7 @@
 --brown-light:hsla(25, 18%, 67%, 0.83);
 --brown-gradient:linear-gradient(120deg, #c79081 0%, #dfa579 100%);
 --text-light:#FFEACE;
+--shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
 
 /*================XX=======COLORS================XX=========*/
 
@@ -66,13 +67,13 @@ a{
 
 button{
     border-radius: 3rem;
-    padding: 1rem 2.5rem;
-    background-color:var(--orange-color);
+    background-color:honeydew;
     font-family: var(--slant-font);
-    font-size: 1.5rem;
     transition: 1s;
-    color: var(--text-light);
-   
+    color: grey;
+    padding: .5rem 1rem ;
+    font-size: 1.0rem ;
+    font-weight: var(--font-weight-text) ;
 }
 
 
@@ -90,7 +91,7 @@ button{
 .header{
     
     width:100%;
-    background-color:var(--deep-brown);
+    background-color:gray;
     position:fixed;
     top:0;
     left:0;
@@ -98,7 +99,7 @@ button{
 }
 
 .big-bg{
-    background-color: var(--deep-brown);
+    background-color: gray;
     height: 100vh;
    
 }
@@ -135,7 +136,7 @@ button{
 }
 
 .nav-item:hover{
-    background-color: var(--brown-light);
+    background-color: grey;
 }
 
 .nav-list{
@@ -151,208 +152,112 @@ button{
 }
 
 .nav-toggle{
-    position: fixed;
-    top: 5%;
+    position: absolute;
+    top: 50%;
     left: 0%;
     font-size: 1.5rem;
 }
 
 .nav-close{
-    position: relative;
+    position: fixed;
     top: 5%;
-    left: 100%;
+    left: 85%;
     font-size: 1.5rem;
-    
-    
-}
-
-.home{
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+    display: none;
     
 }
 
-.home .home-section{
-    display:flex;
-    flex-direction: row;
-  
-    padding: 6rem 0 0 0;
-    width: 100%;
-    position: absolute;
-    top: 3rem;
-}
-
-.food-img{
-    border: 1.5vw solid var(--brown-light);
-    width: 10rem;
-    background-color: transparent;
-    border-radius: 50%;
-}
-.home-section .food-image-container{
-  background-color: var(--brown-light);
-  border-radius: 50%;
-  margin-left: 6vw;
-  width: 30vw;
-   
-    
-}
-
-.home-section .home-content{
-    font-family:var(--h1-font-size);
-    font-weight: var(--font-weight-mid);
-    margin: 5rem  2rem 0 4vw;
-
-}
-.home-title{
-    font-size:var(--h1-font-size);
-    
-}
-
-.afro-dish{
-    font-size: var(--biggest-font-size) ;
-    font-weight: var(--font-weight-big);
-}
-
-.subtitle{
-    font-family: var(--slant-font);
-    font-size: var(--h2-font-size);
-}
-
-.place-order{
-    
-    margin-top: 2rem;
-    position: relative;
-    left:30%;
-}
-
-.design{
-   position: fixed;
-   width: 100vw;
-   top: 80%;
-  
-
-}
-
-.social-link{
-    font-size: 2rem;
-    color:sienna;
-    margin-left: 1rem;
-}
-
-
-.social{
-    display: flex;
-    position: absolute;
-    top: 95%;
-    right: 3rem;    
-}
-
-.home-end-text{
-    font-family: var(--slant-font);
-    font-size: 1.5rem;
-    color: var(--black-text);
-    padding-right: 5vw;
-}
-
-
-@media screen and (max-width:750px){
 
 .home-section{
-    padding: 7vw !important;
-    top: 0.1rem !important;
-    flex-direction: column-reverse !important;
+    width:100vw;
+    padding: 7vw ;
+    position:absolute;
+    top: 4rem ;
+    flex-direction: column-reverse ;
 }
 .home-title{
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
 }
 .nav-toggle{
     left: 85%;
 }
 .afro-dish{
-    font-size: 15vw;
+    font-size: 58px;
 }
-
-
-.food-img{
-   
-    width: 50vw;
-    margin-top: 2rem;
-    border:none;
-    border-radius: 50%;
-    border: 10px solid var(--brown-light);
-}
-
-
 
 .food-image-container{
-    background-color:transparent!important;
-    position: absolute;
-    top: 40vh;
-    padding:0 7vw;
-   
-    
+    position:relative;
+    width: 60vw;
+    left:12vw;
+    }
+.food-img{
+  
+    width: 13rem;
+    border-radius: 50%;
+    border: 10px solid gray;
 }
+
 
 .place-order{
-  
-   
-    top: 40vh !important;
-    right: 30vw!important;
+    position:relative;
+    top: 0.5rem;
+    left: 34%;
 
 }
-.btn{
-    padding: .5rem 2rem ;
-    font-size: 1.0rem !important;
-    font-weight: var(--font-weight-text) !important;
-}
+
+
+
+ .subtitle{
+     font: var(--slant-font);
+     display: none;
+     
+ }
+
 
 .nav-menu{
    flex-direction: column;
     margin-top:1rem;
 }
 
-.subtitle{
-   position: absolute;
-   top: 100%;
-   left: 10%;
-   font-size: 5vw;
-   margin: 29vw 0 0 0 !important ;
-
-}
 
 
 .nav-container{
-   visibility: hidden;
+   display:none;
     transition: 1s ease-out;
     padding: 3rem;
-    position: absolute;
+    position: fixed;
     top: 0 ;
     right: 0 ;
     width: 70vw;
     height: 100vh ;
-    background-image:var(--brown-gradient);  
+    background-color:gray; 
+    z-index: 4; 
 }
 .nav-item{
     font-size: 1.5rem;
 }
+.nav-close{
+    display:initial;
+}
+
 
 .social{
+    display: none;}
+
+.design{
+    position: relative;
+    width: 100vw;
+    bottom: 2rem;
     display: none;
 }
 
-.design{
-    position: absolute;
-    top: 93%;
-}
 
-
-.card-container{
-    display: flex;
-    width: 100vw;
-    
+.popular h1{
+ padding: 0.3rem;
+ text-align: center;
+ font-weight:var(--font-weight-big);
+ font-size: 2rem;
+ margin: 1rem 0;
 }
 
 .card{
@@ -360,22 +265,24 @@ button{
   flex-direction: column;
   justify-content: center;
   font-size: 6vw;
-  height: 300px;
-  margin: 1rem;
-  width: 55vw;
-  background-color:var(--text-light);
+  margin-left: 3rem;
+  width: 70vw;
+  background-color:gray;
   text-align: center;
-  padding: 0 ;
+  box-shadow: var(--shadow);
+
+  
   
 }
 
 .card-img{
-    width: 55vw;
+    width: 40vw;
     padding: 1rem;
 }
 .card-content{
-    background-image: var(--brown-gradient);
+    background-color: gray;
     height: inherit;
+    text-align: center;
 }
 .food-title{
     font-family:var(--slant-font);
@@ -388,22 +295,217 @@ button{
 }
 .rating{
     padding: .5rem 0.1rem;
+    color: orange;
 }
-
-
-}
-
-@media screen and ( max-width: 375px){
-    .subtitle{
-        margin: 20vw 0 0 0 !important;
-        font-size: 1rem;
-    }
-
-    .place-order{
-        top: 12rem !important;
-    }
+.btn{
+    margin-bottom: 1rem;
+    padding: .5rem 2rem ;
     
-    .food-img{
-        width:160px !important;
+}
+
+.chef-name{
+    margin-top:1rem ;
+    text-align: center;
+}
+.chef{
+    padding: 10px;
+    width:90%;
+    display:flex;
+    font-size: 0.7rem;
+    
+    margin:10px;  
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+
+}
+
+.chef-img{
+    width:35vw;
+    height:auto;
+}
+
+.chef-description{
+    padding-left: 10px;
+    
+}
+
+.testimonial-header{
+    text-align: center;
+    
+}
+.testimonial-container{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.testimonial{
+    position: relative;
+    display:flex;
+    width:90vw;
+   margin-top: 3rem;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: rgb(241, 238, 238);
+    box-shadow: var(--shadow);
+
+}
+.subscribe .owl-carousel .owl-item img{
+
+    width: 30% !important;
+}
+
+.test-img{
+    position: absolute;
+    top: -33px;
+    left:-.5rem;
+   height: 6rem;
+   
+    border-radius: 50%;
+    border:solid gray 5px;
+    
+}
+
+.test-review{
+    font-size:10px;
+    padding-left: 25vw;
+}
+.reviewer{
+    
+    font-weight:var(--font-weight-big);
+    font-size:1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact{
+    background-color: gray;
+    margin-top: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    row-gap: 1rem;
+
+}
+
+.subscribe-form{
+    display: flex;
+    height:P 6rem;
+    justify-content: space-between;
+    background-color:gray;
+    
+}
+
+.mail{
+    width: 70%;
+   
+    padding-left: 5px;
+    background-color:honeydew;
+    border:none;
+    
+}
+
+.sub-btn{
+  padding: 0.2rem 0.5rem;
+  display: inline;
+  border-radius: 0;
+  
+}
+
+.empty-text{
+    height: 150px;
+    padding: 0 10px 110px 5px;
+}
+
+.sponsors-container{
+    margin: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+
+
+}
+
+.sponsor{
+    width: 100px;
+    margin: 5vw;
+    transition: .3s;
+}
+
+.footer-container{
+    padding: 10vw;
+}
+
+.footer-note{
+    margin: 0.5rem 0;
+
+}
+.footer-note-container{
+    font-family: var(--slant-font);
+    text-align: center;
+
+}
+
+.social-links-container{
+    justify-content: center;
+    display: flex;
+    margin: 5vw 0;
+    flex-direction: column;
+}
+
+.home-end-text{
+    text-align: center;
+}
+
+.footer-section-container{
+    display: flex;
+   flex-direction: column;
+    row-gap: 1.5rem;
+   
+    
+}
+
+.footer-heading{
+    color: gray;
+}
+
+.footer-item{
+    display: block;
+    margin: 1rem 0;
+}
+
+.footer-rights{
+    margin: 1.5rem 0 0 0;
+    font-size: 13px;
+    
+}
+
+.footer-copyright{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 380px){
+    
+    .afro-dish{
+        font-size: 18vw;
+    }
+
+    .footer-section-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 14vw;
     }
 }
+
+
